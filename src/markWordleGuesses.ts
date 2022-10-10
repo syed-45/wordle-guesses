@@ -6,27 +6,17 @@ interface LetterWithScore {
 type OneLetterScore = "fully correct" | "partially correct" | "incorrect";
 type MarkedGuess = LetterWithScore[];
 
-/**
- * Adds together two numbers
- * @param a - the first number to add
- * @param b - the second number to add
- * @returns the total
- */
-
 /* PSEUDOCODE
-  create returnGuess = {}
+create returnGuess = {}
   for i in guess
-    if guess[i] === hiddenGuess[i]  then 
-      add to returnGuess guess[i] with 'fully correct'
+  if guess[i] === hiddenGuess[i]  then 
+  add to returnGuess guess[i] with 'fully correct'
       else if hiddenTarget.includes(guess[i]) {
         add to returnGuess guess[i] with 'partially correct'
       }
       else add to returnGuess guess[i] with ' incorrect'
     }
-    
-
-
-*/
+    */
 function markWordleGuess(guess: string, hiddenTarget: string): MarkedGuess {
   const guessArr = guess.split("");
   const hiddenTargetArr = hiddenTarget.split("");
